@@ -1,0 +1,30 @@
+{
+  "name": "blogspot-api",
+  "version": "0.0.1",
+  "description": "Blogger API for Node.Js",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.58.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/warlock/blogger-api.git"
+  },
+  "keywords": [
+    "Blogger",
+    "API",
+    "Json",
+    "Node",
+    "Javascript"
+  ],
+  "author": "Josep Subils Rigau <octozon@gmail.com> (http://octozon.com)",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/warlock/blogger-api/issues"
+  },
+  "homepage": "https://github.com/warlock/blogger-api#readme"
+}

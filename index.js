@@ -1,5 +1,5 @@
+// https://developers.google.com/blogger/docs/3.0/using#RetrievingABlog
 var request = require('request');
-//https://developers.google.com/blogger/docs/3.0/using#RetrievingABlog
 
 var get = function (url, callback) {
 	request(url, function (error, response, body) {
@@ -13,11 +13,11 @@ exports.blog = function (blog, apikey, callback) {
 	get(url, callback);
 };
 
-exports.blogId = function () {
+exports.blogId = function (blog, apikey, callback) {
 	var url = "https://www.googleapis.com/blogger/v3/blogs/2399953?key=YOUR-API-KEY";
 }
 
-exports.userBlogs = function (id, apikey, callback) {
+exports.userBlogs = function (userId, apikey, callback) {
 	var url = "	
 	request(url, function (error, response, body) {
 		console.log(body);
@@ -25,31 +25,31 @@ exports.userBlogs = function (id, apikey, callback) {
 };
 
 
-exports.posts = function () {
+exports.posts = function (blog, apikey, callback) {
 	var url = "https://www.googleapis.com/blogger/v3/blogs/blogId/posts";
 	//GET https://www.googleapis.com/blogger/v3/blogs/2399953/posts?key=YOUR-API-KEY
 
 };
 
-exports.post = function () {
+exports.post = function (blog, post, apikey, callback) {
 	//GET https://www.googleapis.com/blogger/v3/blogs/2399953/posts/7706273476706534553?key=YOUR-API-KEY
 };
 
 
-exports.searchPosts = function () {
+exports.searchPosts = function (search, blog, apikey, callback) {
 	//https://www.googleapis.com/blogger/v3/blogs/blogId/posts/search?q=query terms
 };
 
-exports.addPost = function () {
+exports.addPost = function (content, blog, apikey, callback) {
 	//POST https://www.googleapis.com/blogger/v3/blogs/8070105920543249955/posts/
 };
 
 
-exports.deletePost = function () {
+exports.deletePost = function (post, blog, apikey, callback) {
 	//DELETE https://www.googleapis.com/blogger/v3/blogs/blogId/posts/postId
 };
 
-exports.updatePost = function () {
+exports.updatePost = function (content, post, blog, apikey, callback) {
 	//UPDATE https://www.googleapis.com/blogger/v3/blogs/blogId/posts/postId
 };
 
@@ -57,24 +57,22 @@ exports.updatePostSemantics = function () {
 
 };
 
-exports.commentsPost = function () {
+exports.comments = function (post, blog, apikey, callback) {
 	//GET https://www.googleapis.com/blogger/v3/blogs/2399953/posts/6069922188027612413/comments?key=YOUR-API-KEY
 };
 
-exports.comment = function () {
+exports.comment = function (comment, post, blog, apikey, callback) {
 	//GET https://www.googleapis.com/blogger/v3/blogs/2399953/posts/6069922188027612413/comments/9200761938824362519?key=YOUR-API-KEY
 };
 
-exports.pages = function () {
+exports.pages = function (blog, apikey, callback) {
 	//GET https://www.googleapis.com/blogger/v3/blogs/4967929378133675647/pages?key=YOUR-API-KEY
 };
 
-exports.page = function () {
+exports.page = function (page, block, apikey, callback) {
 	//GET https://www.googleapis.com/blogger/v3/blogs/4967929378133675647/pages/273541696466681878?key=YOUR-API-KEY
 };
 
-exports.users = function () {
+exports.users = function (user, apikey, callback) {
 	//GET https://www.googleapis.com/blogger/v3/users/userId
 };
-
-

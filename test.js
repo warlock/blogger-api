@@ -1,1 +1,0 @@
-var blogspot = require('blogspot');

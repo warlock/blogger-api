@@ -1,5 +1,5 @@
 {
-  "name": "blogspot-api",
+  "name": "blogger-api",
   "version": "0.0.1",
   "description": "Blogger API for Node.Js",
   "main": "index.js",

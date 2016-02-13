@@ -9,19 +9,21 @@ var get = function (url, callback) {
 };
 
 exports.blog = function (blog, apikey, callback) {
-	var url = 'https://www.googleapis.com/blogger/v3/blogs/byurl?url=' + blog + '&key=' + apikey;
-	get(url, callback);
+	get('https://www.googleapis.com/blogger/v3/blogs/byurl?url=' + blog + '&key=' + apikey, function (err, data) {
+		callback(err, data);
+	});
 };
 
 exports.blogId = function (blog, apikey, callback) {
-	var url = "https://www.googleapis.com/blogger/v3/blogs/2399953?key=YOUR-API-KEY";
+	get("https://www.googleapis.com/blogger/v3/blogs/" + blog + "?key=" + apikey, function (err, data) {
+		callback(err, data);
+	});
 }
 
 exports.userBlogs = function (userId, apikey, callback) {
-	var url = "	
-	request(url, function (error, response, body) {
-		console.log(body);
-	});
+	get("https://www.googleapis.com/blogger/v3/blogs/" + blog + "?key=" + apikey, function (err, data) {
+		callback(err, data);
+	}); 
 };
 
 
